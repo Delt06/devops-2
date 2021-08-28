@@ -17,7 +17,7 @@ class TestTimeUtils(unittest.TestCase):
 
     def test_format_time_zero(self):
         time = datetime(year=1, month=1, day=1, hour=0, minute=0, second=0)
-        self.assertEqual(format_time(time), "01/01/0001, 00:00:00")
+        self.assertEqual(format_time(time), "01/01/1, 00:00:00")
 
     def test_format_time_none(self):
         with self.assertRaises(TypeError):
