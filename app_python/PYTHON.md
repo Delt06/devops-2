@@ -14,5 +14,5 @@ Flask is one of the most popular web micro-frameworks for Python. It requires mi
 
 ## References
 
-- https://data-flair.training/blogs/python-best-practices/
-- https://gist.github.com/sloria/7001839
+- <https://data-flair.training/blogs/python-best-practices/>
+- <https://gist.github.com/sloria/7001839>
