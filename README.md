@@ -30,6 +30,9 @@
       </ol>
     </li>
     <li>
+      <a href="#unit-tests">Unit Tests</a>
+    </li>
+    <li>
       <a href="#acknowledgements">Acknowledgements</a>
     </li>
   </ol>
@@ -104,6 +107,16 @@ docker build -t deltation/devops-app-python .
 
 ```sh
 docker run -p 5000:5000 deltation/devops-app-python
+```
+
+## Unit Tests
+
+The project contains a test suite for the Python App. The suite relies on the `unittest` module.
+
+To run tests locally, executes the following command from the `app_python` folder:
+
+```sh
+python test.py
 ```
 
 ## Acknowledgements

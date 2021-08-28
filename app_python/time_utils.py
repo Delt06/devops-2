@@ -12,5 +12,8 @@ def get_time_now() -> datetime:
 
 
 def format_time(time: datetime) -> str:
+    if time is None:
+        raise TypeError
+
     datetime_format = '%m/%d/%Y, %H:%M:%S'
     return time.strftime(datetime_format)
