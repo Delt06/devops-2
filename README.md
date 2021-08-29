@@ -3,6 +3,9 @@
   <h1 align="center">DevOps Labs</h3>
 </p>
 
+[![Test](https://github.com/Delt06/devops-2/actions/workflows/test.yml/badge.svg)](https://github.com/Delt06/devops-2/actions/workflows/test.yml)
+
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -118,6 +121,10 @@ To run tests locally, executes the following command from the `app_python` folde
 ```sh
 python test.py
 ```
+
+## Github Actions
+
+The project contains a `Test` workflow, which is trigger on every push and pull request. The tests are run inside a Docker container. The status of tests is reflected by the badge at the top of this README file.
 
 ## Acknowledgements
 
