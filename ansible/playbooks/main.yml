@@ -1,34 +1,8 @@
 - hosts: all
 
-- name: Wait until system is ready
-  hosts: all
-  become: yes
-  gather_facts: no
-  tasks:
-    - name: Wait for apt list lock (Known to cause issues sometimes)
-      raw: while fuser /var/lib/apt/lists/lock >/dev/null 2>&1; do echo 'Waiting for apt list lock.' && sleep 10; done
-
-    - name: Create project directory  
-      file:
-        path: /opt/devops-app-python   
-        state: directory
-
-    - name: copy Docker Compose files
-      copy:
-        src: ./docker-compose.yml
-        dest: /opt/devops-app-python/docker-compose.yml
-
-    - name: deploy Docker Compose stack
-      docker_compose:
-        project_src: /opt/devops-app-python
-        pull: yes
-        recreate: always
-
   vars:
-    pip_install_packages: [docker, docker-compose]
-    docker_install_compose: true
+    deployment_app_name: devops-app-python
 
   roles:
-    - geerlingguy.pip
-    - geerlingguy.docker
+    - docker-compose-deploy
 
