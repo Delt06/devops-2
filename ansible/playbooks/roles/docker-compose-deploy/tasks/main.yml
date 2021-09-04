@@ -1,4 +1,7 @@
-- name: Include pip role
+- name: Install Python
+  raw: sudo apt update && sudo apt install python3
+
+- name: Include Docker role
   include_role: 
     name: geerlingguy.pip
   vars:

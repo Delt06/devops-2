@@ -4,5 +4,5 @@
     deployment_app_name: devops-app-python
 
   roles:
-    - docker-compose-deploy
+    - { role: docker-compose-deploy, become: yes }
 
