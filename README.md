@@ -83,6 +83,7 @@ flask run
 ```
 
 * Open the app by the suggested link
+* Go to `<suggested link>/visits` to view the times when you visited the root (`/`) page
 
 ## Docker
 
@@ -110,6 +111,20 @@ docker build -t deltation/devops-app-python .
 
 ```sh
 docker run -p 5000:5000 deltation/devops-app-python
+```
+
+### Launching with `docker-compose`
+
+* Go to the `app_python` directory
+
+```sh
+cd ./devops/app_python
+```
+
+* Launch via `docker-compose`
+
+```sh
+docker-compose up
 ```
 
 ## Unit Tests
