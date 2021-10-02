@@ -4,7 +4,7 @@ from os import linesep
 from pathlib import Path
 
 app = Flask(__name__)
-visit_log_path = './visits'
+visit_log_path = './visits/visits.txt'
 
 
 @app.route('/')
